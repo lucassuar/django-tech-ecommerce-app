@@ -9,6 +9,7 @@ from checkout import urls as urls_checkout
 from django.views import static
 from django.views.generic import RedirectView
 from posts import urls as urls_posts
+from suggestions import urls as urls_suggestions
 from django.views.static import serve
 from .settings import MEDIA_ROOT
 
@@ -20,8 +21,9 @@ urlpatterns = [
     url(r'^cart/', include(urls_cart)),
     url(r'^search/', include(urls_search)),
     url(r'^checkout/', include(urls_checkout)),
-    url(r'^$', RedirectView.as_view(url='posts/')),
     url(r'^posts/', include('posts.urls')),
     url(r'^posts/', include(urls_posts)),
+    url(r'^suggestions/', include('suggestions.urls')),
+    url(r'^suggestions/', include(urls_suggestions)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
 ]
