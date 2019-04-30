@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row">
+        <div class="col-sm-10 col-md-9">
+            {% if suggestion.image %}
+                <img class="img-suggestion" src="/media/{{ suggestion.image }}">
+            {% endif %}
+            <h3>{{ suggestion.title }}</h3>
+            <div class="row">
+                <div class="col-xs-9">
+                    <p>{{ suggestion.content }}</p>
+                    <a href="{% url 'get_suggestions' %}" class="btn btn-default">Back to Suggestions</a>
+                    <a href="{% url 'edit_suggestions' suggestion.id %}" class="btn btn-default">Edit Suggestion</a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
