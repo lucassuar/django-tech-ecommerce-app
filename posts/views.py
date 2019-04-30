@@ -11,7 +11,6 @@ def get_posts(request):
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    post.views += 1
     post.save()
     return render(request, "postdetail.html", {'post': post})
 

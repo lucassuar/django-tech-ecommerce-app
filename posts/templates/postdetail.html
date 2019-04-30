@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row">
+        <div class="col-sm-10 col-md-9">
+            {% if post.image %}
+                <img class="img-blogpost" src="/media/{{ post.image }}">
+            {% endif %}
+            <h3>{{ post.title }}</h3>
+            <div class="row">
+                <div class="col-xs-9">
+                    <p>{{ post.content }}</p>
+                    <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
+                    <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
+                    <a href="{% url 'get_posts' %}" class="btn btn-default">Back to Blog</a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
