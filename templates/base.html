@@ -25,8 +25,10 @@
 
 <body>
     <!-- Navbar  -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="{% url 'index' %}">* Django-Ecommerce *</a>
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'img/BnOLogo.png' %}" width="30" height="30" alt="">
+             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -75,7 +77,6 @@
                     <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search">
                     <button type="search" class="btn btn-outline-success my-2 my-sm-0">Search</button>
                 </form>
-                
             </div>
     </nav>
     
@@ -84,7 +85,6 @@
         {% block page_heading %}{% endblock %}
     </h1>
 
-    <hr> 
     {% if messages %}
         <div>
             {% for message in messages %} {{ message }} {% endfor %}
@@ -93,6 +93,11 @@
     
     {% block content %} {% endblock %}
     
+    <!-- Footer -->
+    
+    <div class="footer">
+        <p>Footer</p>
+    </div>
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

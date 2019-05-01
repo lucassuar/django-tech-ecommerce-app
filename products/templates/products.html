@@ -1,27 +1,108 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="row row-flex">
-    {% for product in products %}
-        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
-            <div class="panel-body">
-                <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
 
-                <h3>{{ product.name }}</h3>
-                <p class="product-description">{{ product.description }}</p>
-                <p>{{ product.price }}</p>
+<!-- Main Banner -->
 
-                <form method="post" action="{% url 'add_to_cart' product.id %}">
-                    {% csrf_token %}
-                    <div class="input-group">
-                        <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
-                        <span class="input-group-btn">
-                            <button class="btn btn-success" type="submit">Add</button>
-                        </span>
+    <div class="jumbotron"> 
+        <div class="container-fluid">
+            <div class="row row-flex">
+                <div class="col-xs-12">
+                    <h3 class="title-homepage">Welcome To Our Shop. Where Art, Technology & Beatuty Meets.</h3>
+                    <img src=""></img>
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+
+<!-- Products showcase -->
+
+    <div class="container products-showcase">
+        <div class="row row-flex">
+            {% for product in products %}
+                <div class="col-xs-12 col-md-6 col-lg-3 display panel panel-default">
+                    <div class="card overlay zoom" style="width: 18rem;">
+                      <img src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" />
+                      <div class="card-body">
+                        <h5 class="card-title product-name">{{ product.name }}</h5>
+                        <!-- <p class="card-text product-description">{{ product.description }}</p> -->
+                        <p class="product-price">€ {{ product.price }}</p>
+                      </div>
+                      <form method="post" action="{% url 'add_to_cart' product.id %}">
+                            {% csrf_token %}
+                            <div class="input-group add-checkout-div">
+                                <input class="input-add-checkout"  name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-add-cart" type="submit">Add to Cart</button>
+                                </span>
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
+    
+            {% endfor %}
+        </div>
+    </div>
+
+<!-- Parallax Banner -->
+
+    <div class="container-fluid parallax"></div> 
+
+
+<!-- Blog Entries -->
+
+    <section class="blog bgwhite p-t-94 p-b-65">
+    		<div class="container">
+    			<div class="sec-title p-b-52">
+    				<h3 class="m-text5 t-center">
+    					Our latest news
+    				</h3>
+    			</div>
+    
+    			<div class="row">
+    			  {% for post in posts %}
+        				<div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+        					<!-- Block3 -->
+        					<div class="block3">
+        						<a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
+        							<img src="img-blogpost" src="/media/{{ post.image }}">
+        						</a>
+        
+        						<div class="block3-txt p-t-14">
+        							<h4 class="p-b-7">
+        								<a href="blog-detail.html" class="m-text11">
+        									{{ post.title }}
+        								</a>
+        							</h4>
+        							<p class="s-text8 p-t-16">
+        								{{ post.content|truncatewords:30 }}
+        							</p>
+        						</div>
+        					</div>
+        				</div>
+                    {% endfor %} 
+    			</div>
+    		</div>
+    	</section>
+    	
+    	{% for post in posts %}
+        <div class="row">
+            <div class="col-md-10 col-sm-9">
+                <h3>{{ post.title }}</h3>
+                <img class="img-blogpost" src="/media/{{ post.image }}">
+                <div class="row">
+                    <div class="col-xs-9">
+                        <p>{{ post.content|truncatewords:30 }}</p>
+                        <p><a href="{% url 'post_detail' post.id %}"  class="btn btn-default">Read more</a></p>
+                        <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
+                    </div>
+                </div>
             </div>
+            <hr>
         </div>
     {% endfor %}
-</div>
+
+
+<!-- Blog Posts end-->
+
 {% endblock %}

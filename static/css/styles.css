@@ -1,0 +1,103 @@
+
+body, html {
+    background-color: yellow;
+}
+
+/* ----------------------------------------------------------------------------------------
+                                 1. NavBar-Search CSS
+ --------------------------------------------------------------------------------------- */
+
+.navbar {
+    color: black;
+    background-color: white;
+    border-bottom: 1px grey;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------
+                                 2. Products Page CSS 
+ --------------------------------------------------------------------------------------- */
+
+.products-showcase {
+    Padding-top: 70px;
+    padding-bottom: 70px;
+    
+}
+ 
+ 
+.jumbotron {
+    background: white url("/static/img/ecommerce-header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20em;
+    filter: brightness(50%);
+}
+
+
+.title-homepage {
+    text-align: center;
+    color: white;
+    vertical-align: middle;
+}
+
+.card {
+  border: 0px solid;
+  border-radius: 0px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.add-checkout-div {
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.input-add-checkout {
+    
+}
+
+.btn-add-cart {
+    border-radius: 0px;
+    border-color: black;
+    border: 1px solid;
+    background-color: white;
+    color: black;
+}
+
+.btn-add-cart:hover {
+    background-color: black;
+    color: white;
+}
+
+
+/* Parallax div product page */
+
+.parallax {
+    background: url("/static/img/ecommerce-header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 15em;
+    background-attachment: fixed;
+    filter: brightness(50%);
+}
+
+
+/* ----------------------------------------------------------------------------------------
+                                 3. Footer CSS 
+ --------------------------------------------------------------------------------------- */
+ 
+ 
+ .footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: grey;
+  color: white;
+  text-align: center;
+  height: 20em;
+}
