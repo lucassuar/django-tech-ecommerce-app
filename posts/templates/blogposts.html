@@ -1,19 +1,54 @@
 {% extends 'base.html' %}
 {% block content %}
+
+ 
+<div class="container">
+    <div class="row">
     {% for post in posts %}
-        <div class="row">
-            <div class="col-md-10 col-sm-9">
-                <h3>{{ post.title }}</h3>
-                <img class="img-blogpost" src="/media/{{ post.image }}">
+              <div class="col-lg-8">
+                    <h1 class="mt-4">{{ post.title }}</h1>
+                    <hr>
+                    
+                    <p> {{ post.published_date }} </p>
+                    <img class="img-fluid" src="/media/{{ post.image }}">
+                    <hr>
+            
+                    <p class="lead">{{ post.content|truncatewords:30 }}</p>
+                    <p><a href="{% url 'post_detail' post.id %}"  class="btn btn-default">Read more</a></p>
+              </div>
+        
+        {% endfor %}
+
+
+ <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+            <!-- Categories Widget -->
+            <div class="card my-4">
+              <h5 class="card-header">Products</h5>
+              <div class="card-body">
                 <div class="row">
-                    <div class="col-xs-9">
-                        <p>{{ post.content|truncatewords:30 }}</p>
-                        <p><a href="{% url 'post_detail' post.id %}"  class="btn btn-default">Read more</a></p>
-                        <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
-                    </div>
+                  <div class="col-lg-6">
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <a href="#">Product1<</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-6">
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <a href="#">Product1</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
             </div>
-            <hr>
         </div>
-    {% endfor %}
+
+    </div>
+  </div>
+    
+
+    
 {% endblock %}
