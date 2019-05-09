@@ -89,6 +89,12 @@ body, html {
 /* Blog entries section - products page */
 
 
+/* ----------------------------------------------------------------------------------------
+                                 3. Checkout Page CSS 
+ --------------------------------------------------------------------------------------- */
+ 
+
+
 
 /* ----------------------------------------------------------------------------------------
                                  3. Footer CSS 
@@ -169,17 +175,7 @@ body, html {
     text-decoration: none;
 }
 
-#myFooter .facebook:hover {
-    color: #0077e2;
-}
 
-#myFooter .google:hover {
-    color: #ef1a1a;
-}
-
-#myFooter .twitter:hover {
-    color: #00aced;
-}
 
 #myFooter .btn {
     color: white;
