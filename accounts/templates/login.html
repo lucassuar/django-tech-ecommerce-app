@@ -4,15 +4,26 @@
 
 {% block page_title %}Login Page{% endblock %} 
 
-{% block page_heading %}Login{% endblock %} 
-
 {% block content %}
+  <div class="container-fluid parallax"></div>
+  
+<div class="container">
+      <div class="py-5 text-center">
+        <h2>Login</h2>
+        <p class="lead">Please fill up the details below to Login to B&O shop.</p>
+        <p>If you don not have an account with us, you can <a href="{% url 'registration' %}">Register in here</a></p>
+      </div>
+      <div class="row">
+           <div class="col-xs-12 col-md-6 col-lg-4 col-centered"">
+             <form method="POST">
+                 {% csrf_token %} {{ login_form | as_bootstrap}}
+                 <button type="submit" class="btn btn-outline-success">Login</button>
+             </form>
+             
+             <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
+           </div>
+       </div>
+</div>
 
-<form method="POST">
-    {% csrf_token %} {{ login_form | as_bootstrap}}
-    <button type="submit" class="btn btn-outline-success">Login</button>
-</form>
-
-<p><a href="{% url 'password_reset' %}">Reset Password</a></p>
 
 {% endblock %}

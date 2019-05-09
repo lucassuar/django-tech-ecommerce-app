@@ -4,16 +4,21 @@
 
 {% block page_title %}Registration Page{% endblock %} 
 
-{% block page_heading %}Registration{% endblock %} 
 
 {% block content %}
 
+<div class="container-fluid parallax"></div>
 
-     <p>If you already have an account, you can <a href="{% url 'login' %}">Login in here</a></p>
-     
+   <div class="container">
+      <div class="py-5 text-center">
+        <h2>Registration form</h2>
+        <p class="lead">Please fill up the details below to register to B&O shop.</p>
+        <p>If you already have an account, you can <a href="{% url 'login' %}">Login in here</a></p>
+      </div>
+
      <form method="POST">
          {% csrf_token %} {{ registration_form | as_bootstrap }}
          <button type="submit" class="btn btn-outline-success">Register</button>
      </form>
-
+   </div>
 {% endblock %}
