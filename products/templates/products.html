@@ -17,19 +17,21 @@
 
 
 <!-- Products showcase -->
-
-    <div class="container products-showcase">
-        <div class="row row-flex">
-            {% for product in products %}
-                <div class="col-xs-12 col-md-6 col-lg-3 display panel panel-default">
-                    <div class="card overlay zoom" style="width: 18rem;">
-                      <img src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" />
-                      <div class="card-body">
-                        <h5 class="card-title product-name">{{ product.name }}</h5>
-                        <!-- <p class="card-text product-description">{{ product.description }}</p> -->
-                        <p class="product-price">€ {{ product.price }}</p>
-                      </div>
-                      <form method="post" action="{% url 'add_to_cart' product.id %}">
+    
+    <section class="products-showcase">
+	   <div class="container">
+           <div class="row align-items-center row-header card-columns">
+           <div class="card-deck">
+               {% for product in products %}
+                    <div class="col-lg-3 col-md-6 col-xs-12 header-first">
+                        <div class="card text-center" style="width: 18rem;">
+                            <img src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" />
+                            <div class="card-body">
+                                <h5 class="card-title product-name">{{ product.name }}</h5>
+                            <!-- <p class="card-text product-description">{{ product.description }}</p> -->
+                                <p class="product-price">€ {{ product.price }}</p>
+                            </div>
+                            <form method="post" action="{% url 'add_to_cart' product.id %}">
                             {% csrf_token %}
                             <div class="input-group add-checkout-div">
                                 <input class="input-add-checkout"  name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
@@ -38,12 +40,12 @@
                                 </span>
                             </div>
                         </form>
+                        </div>
                     </div>
-                </div>
-    
-            {% endfor %}
-        </div>
-    </div>
+              {% endfor %}   
+           </div>
+        </div>    
+	</section>
 
 <!-- Parallax Banner -->
 
