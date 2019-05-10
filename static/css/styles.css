@@ -17,6 +17,9 @@ body, html {
     color: black;
     background-color: white;
     border-bottom: 1px solid #f5f5f3;
+    margin-bottom: -8px;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 
@@ -24,6 +27,25 @@ body, html {
   color: black;
   text-decoration: none;
   text-transform: uppercase;
+  font-size: small;
+}
+
+.btn-dark, .form-control {
+   border-radius: 0;
+   text-transform: uppercase;
+}
+
+.btn-dark {
+   padding-top: 2px;
+   padding-bottom: 2px;
+}
+
+input[placeholder="Search"]{
+   font-size: small;
+}
+
+input {
+   border-radius: 0;
 }
 
 /* ----------------------------------------------------------------------------------------
@@ -84,22 +106,6 @@ body, html {
     padding-left: 1em;
 }
 
-.input-add-checkout {
-    
-}
-
-.btn-add-cart {
-    border-radius: 0px;
-    border-color: black;
-    border: 1px solid;
-    background-color: white;
-    color: black;
-}
-
-.btn-add-cart:hover {
-    background-color: black;
-    color: white;
-}
 
 
 /* Parallax div product page */
@@ -216,7 +222,6 @@ body, html {
 #myFooter .btn {
     color: white;
     background-color: #d84b6b;
-    border-radius: 20px;
     border: none;
     width: 150px;
     display: block;
