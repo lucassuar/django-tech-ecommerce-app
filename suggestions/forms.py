@@ -6,4 +6,4 @@ class ProductSuggestForm(forms.ModelForm):
 
     class Meta:
         model = Suggestion
-        fields = ('title', 'content', 'image')
+        fields = ('title', 'content')

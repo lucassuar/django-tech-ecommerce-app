@@ -1,22 +1,50 @@
 {% extends 'base.html' %}
+{% load bootstrap_tags %}
 {% block content %}
-                <div>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{% url 'new_suggestion' %}">New Suggestion</a></li>
-                    </ul>
-                </div>
 
-    {% for suggestion in suggestions %}
-        <div class="row">
-            <div class="col-md-10 col-sm-9">
-                <h3>{{ suggestion.title }}</h3>
-                <div class="row">
-                    <div class="col-xs-9">
-                        <p>{{ suggestion.content }}</p>
+
+<!-- Header  -->
+
+<div class="jumbotron">
+    <div class="container-fluid">
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="container mb-5">
+  <!-- Title  -->  
+    <div class="sec-title p-b-52 mt-3 mb-5">
+        <h3 class="m-text5 t-center"> Product Suggestions </h3>
+        <p>In this section you can make public any product suggestion you migh have. We take very serious all our customers feedback and we´ll do our best to add new products on sale base on your suggestions.</p>
+    </div>
+    
+    <!-- Suggestions  -->
+    <div id="accordion">
+        {% for suggestion in suggestions %}   
+            <div class="card mb-3">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0"> {{ suggestion.title }} </h5>
+                </div>
+        
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        {{ suggestion.content }}
                     </div>
+                    
                 </div>
             </div>
-            <hr>
-        </div>
-    {% endfor %}
+         {% endfor %}
+    </div>
+
+
+<!-- Button new suggestion  -->
+
+    <button type="button" class="btn btn-outline-primary"><a href="{% url 'new_suggestion' %}"> Add Product Suggestion</a></button>
+
+</div>
 {% endblock %}
