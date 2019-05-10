@@ -1,13 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
+                <div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{% url 'new_suggestion' %}">New Suggestion</a></li>
+                    </ul>
+                </div>
+
     {% for suggestion in suggestions %}
         <div class="row">
             <div class="col-md-10 col-sm-9">
                 <h3>{{ suggestion.title }}</h3>
                 <div class="row">
                     <div class="col-xs-9">
-                        <p>{{ suggestion.content|truncatewords:30 }}</p>
-                        <p><a href="{% url 'suggestion_detail' suggestion.id %}"  class="btn btn-default">Read more</a></p>
+                        <p>{{ suggestion.content }}</p>
                     </div>
                 </div>
             </div>
