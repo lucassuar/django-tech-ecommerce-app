@@ -120,6 +120,12 @@ input {
     filter: brightness(50%);
 }
 
+.input-add-checkout {
+    width: 30%;
+    margin-left: 2em;
+}
+
+
 /* Blog entries section - products page */
 
 
@@ -212,7 +218,7 @@ input {
 }
 
 #myFooter .social-networks a {
-    font-size: 32px;
+    font-size: 20px;
     color: #f9f9f9;
     padding: 10px;
     transition: 0.2s;
@@ -220,6 +226,7 @@ input {
 
 #myFooter .social-networks a:hover {
     text-decoration: none;
+    color: #f9f9f9;
 }
 
 
