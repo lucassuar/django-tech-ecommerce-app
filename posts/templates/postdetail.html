@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
       <!-- Post Content Column -->
-        <div class="col-lg-8">
+        <div class="col-lg-8 mb-5">
             <h1 class="mt-4"> {{ post.title }} </h1>
             <hr>
             <p>Posted: {{ post.published_date }}</p>
@@ -24,8 +24,7 @@
               </footer>
             </blockquote>
             
-            <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
-                    <a href="{% url 'get_posts' %}" class="btn btn-default">Back to Blog</a>
+            <a href="{% url 'get_posts' %}" class="btn btn-dark rounded-0">Back to Blog →</a>
     
         </div>
     

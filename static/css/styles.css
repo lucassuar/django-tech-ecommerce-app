@@ -156,7 +156,7 @@ input {
     padding-top: 30px;
 }
 
-#myFooter .footer-copyright {
+.footer-copyright {
     background-color: #333333;
     padding-top: 3px;
     padding-bottom: 3px;
@@ -167,14 +167,12 @@ input {
     margin-bottom: 60px;
 }
 
-#myFooter .navbar-brand {
-    margin-top: 45px;
-    height: 65px;
-}
 
-#myFooter .footer-copyright p {
+.footer-copyright p {
     margin: 10px;
     color: #ccc;
+    text-transform: uppercase;
+    font-size: smaller;
 }
 
 #myFooter ul {
@@ -225,16 +223,9 @@ input {
 }
 
 
-
-#myFooter .btn {
-    color: white;
-    background-color: #d84b6b;
-    border: none;
-    width: 150px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 10px;
-    line-height: 25px;
+.footer-links {
+    text-align: center;
+    text-transform: uppercase;
 }
 
 
