@@ -9,7 +9,7 @@
 
 <div class="container-fluid parallax"></div>
 
-   <div class="container">
+   <div class="container mb-5">
       <div class="py-5 text-center">
         <h2>Registration form</h2>
         <p class="lead">Please fill up the details below to register to B&O shop.</p>
@@ -18,7 +18,7 @@
 
      <form method="POST">
          {% csrf_token %} {{ registration_form | as_bootstrap }}
-         <button type="submit" class="btn btn-outline-success">Register</button>
+         <button type="submit" class="btn btn-dark rounded-0">Register</button>
      </form>
    </div>
 {% endblock %}

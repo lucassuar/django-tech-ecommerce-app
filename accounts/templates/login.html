@@ -5,7 +5,7 @@
 {% block page_title %}Login Page{% endblock %} 
 
 {% block content %}
-  <div class="container-fluid parallax"></div>
+<div class="container-fluid parallax"></div>
   
 <div class="container">
       <div class="py-5 text-center">
@@ -17,7 +17,7 @@
            <div class="col-xs-12 col-md-6 col-lg-4 col-centered"">
              <form method="POST">
                  {% csrf_token %} {{ login_form | as_bootstrap}}
-                 <button type="submit" class="btn btn-outline-success">Login</button>
+                 <button type="submit" class="btn btn-dark rounded-0" >Login</button>
              </form>
              
              <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
