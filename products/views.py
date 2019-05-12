@@ -6,7 +6,8 @@ from django.utils import timezone
 
 def all_products(request):
     products = Product.objects.all()
-    return render(request, "products.html", {"products": products})
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    return render(request, "products.html", {"products": products, 'posts': posts})
     
 def all_products2(request):
     products = Product.objects.all()
@@ -18,6 +19,5 @@ def product_detail(request, pk):
     return render(request, "productdetail.html", {'product': product})
     
 def get_posts2(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()
-        ).order_by('-published_date')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, "products.html", {'posts': posts})
