@@ -125,6 +125,11 @@ input {
     margin-left: 2em;
 }
 
+.title-product-link {
+    text-transform: uppercase;
+    color: black;
+    font-size: medium;
+}
 
 /* Blog entries section - products page */
 

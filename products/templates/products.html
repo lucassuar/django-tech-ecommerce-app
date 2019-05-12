@@ -25,9 +25,9 @@
                {% for product in products %}
                     <div class="col-lg-3 col-md-6 col-xs-12 header-first">
                         <div class="card text-center" style="width: 18rem;">
-                            <img src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" />
+                            <a href="{% url 'product_detail' product.id %}"  class="image-product-link"><img src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" /></a>
                             <div class="card-body">
-                                <h5 class="card-title product-name">{{ product.name }}</h5>
+                                <h5 class="card-title product-name"><a href="{% url 'product_detail' product.id %}"  class="title-product-link">{{ product.name }}</a></h5>
                             <!-- <p class="card-text product-description">{{ product.description }}</p> -->
                                 <p class="product-price">€ {{ product.price }}</p>
                             </div>
@@ -42,7 +42,6 @@
                         </form>
                         </div>
                     </div>
-                    <p><a href="{% url 'product_detail' product.id %}"  class="btn btn-dark rounded-0">Read more</a></p>
               {% endfor %}   
            </div>
         </div>    
