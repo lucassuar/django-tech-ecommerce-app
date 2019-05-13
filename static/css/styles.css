@@ -133,6 +133,12 @@ input {
 
 /* Blog entries section - products page */
 
+.img-fluid {
+    object-fit: cover;
+}
+
+
+
 
 /* ----------------------------------------------------------------------------------------
                                  3. Product detail Page CSS 
