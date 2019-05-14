@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid parallax"></div>
+
+<section class="mt-5 mb-5 pt-5 pb-5 text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">About B&O</h1>
+          <p class="lead text-muted">We aim to develop the best innovation with your help.</p>
+          <p class="pb-5">B&O is a technology base shop and manufature that offer users the posibility of suggesting and adding their own products ideas, the ones that get more votes will be select to for the testing manufacture process and added to the online shop. Depending on each product sale performance, it will be assign for mass production or will be discharge from the catalogue.</p>
+          <p>
+            <a href="{% url 'get_suggestions' %}" class="btn btn-dark rounded-0 btn-sm my-2">Send your product suggestion</a>
+            <a href="{% url 'all_products2' %}" class="btn btn-dark rounded-0 btn-sm my-2">Buy our latest innovations</a>
+          </p>
+        </div>
+</section>
+{% endblock %}

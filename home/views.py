@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
 
-def index(request):
-    """View to display index.html"""
-    return render(request, "index.html")
+def about(request):
+    """View to display about.html"""
+    return render(request, "about.html")

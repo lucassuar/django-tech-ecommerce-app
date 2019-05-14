@@ -16,6 +16,7 @@ from suggestions import urls as urls_suggestions
 from suggestions.views import get_suggestions
 from django.views.static import serve
 from .settings import MEDIA_ROOT
+from home.views import about
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -33,5 +34,6 @@ urlpatterns = [
     url(r'^suggestions/', include('suggestions.urls')),
     url(r'^suggestions/', include(urls_suggestions)),
     url(r"^suggestions$", get_suggestions, name="get_suggestions"),
+    url('about/', about, name='about'),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
 ]
