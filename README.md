@@ -121,14 +121,14 @@ Data e-commerce:
 Data Blog Post:
 
 Id | When is Created | Id Name | Text | Tag | Image | 
---- | --- | --- | --- | --- | --- | --- | ---
+--- | --- | --- | --- | --- | --- | 
 1 | Date | Title| Blog Post content | Category type | image|
 
 Data Suggestions:
 
-Id | When is Created | Id Name | Text | Image | 
---- | --- | --- | --- | --- | --- | --- | ---
-1 | Date | Suggestion title| Suggestion content | image|
+Id | When is Created | Id Name | Text |
+--- | --- | --- | --- | 
+1 | Date | Suggestion title| Suggestion content |
 
 ## Deployment
 <p>
