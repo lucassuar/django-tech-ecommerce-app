@@ -115,6 +115,20 @@ Below are some of the potential stories that users can follow:
 
 ## Databse schema:
 
+Data e-commerce:
+<img width="928" alt="database products" src="https://user-images.githubusercontent.com/47657461/57696729-5dce4480-7649-11e9-917c-d4a42959f419.png">
+
+Data Blog Post:
+
+Id | When is Created | Id Name | Text | Tag | Image | 
+--- | --- | --- | --- | --- | --- | --- | ---
+1 | Date | Title| Blog Post content | Category type | image|
+
+Data Suggestions:
+
+Id | When is Created | Id Name | Text | Image | 
+--- | --- | --- | --- | --- | --- | --- | ---
+1 | Date | Suggestion title| Suggestion content | image|
 
 ## Deployment
 <p>
