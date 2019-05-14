@@ -115,7 +115,7 @@ Below are some of the potential stories that users can follow:
 
 ## Databse schema:
 
-Data e-commerce:
+Data e-commerce example:
 <img width="928" alt="database products" src="https://user-images.githubusercontent.com/47657461/57696729-5dce4480-7649-11e9-917c-d4a42959f419.png">
 
 Data Blog Post:

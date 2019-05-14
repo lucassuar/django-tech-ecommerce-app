@@ -44,12 +44,23 @@
                         <a class="nav-link" href="{% url 'all_products2' %}"> Products <span class="sr-only">(current)</span></a>
                     </li>
                     
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'get_suggestions' %}">Suggestions <span class="sr-only">(current)</span></a>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{% url 'get_suggestions' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Product-Suggestions
+                            </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'get_suggestions' %}">See all suggestions</a>
+                            <a class="dropdown-item" href="{% url 'new_suggestion' %}">Add new suggestion</a>
+                        </div>
                     </li>
                     
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'get_posts' %}">Blog <span class="sr-only">(current)</span></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">What´s B&O<span class="sr-only">(current)</span></a>
                     </li>
             
                  </ul>
