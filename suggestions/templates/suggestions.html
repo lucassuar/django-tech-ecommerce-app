@@ -21,7 +21,7 @@
     <!-- Suggestions  -->
     <div id="accordion">
         {% for suggestion in suggestions %}   
-            <div class="card mb-3">
+            <div class="card mb-3 rounded-0">
                 <div class="card-header" id="headingOne">
                     <h5 class="mb-0"> {{ suggestion.title }} </h5>
                 </div>
@@ -39,7 +39,7 @@
 
 <!-- Button new suggestion  -->
 
-    <button type="button" class="btn btn-dark rounded-0"><a href="{% url 'new_suggestion' %}"> Add Product Suggestion</a></button>
+    <a href="{% url 'new_suggestion' %}" class="btn btn-dark rounded-0 btn-sm btn-home-products " >Add Product Suggestion</a>
 
 </div>
 {% endblock %}
