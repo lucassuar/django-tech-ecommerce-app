@@ -1,5 +1,7 @@
-[![Build Status](travis url)](travi url)
+[![Build Status](https://travis-ci.org/lucassuar/django-tech-ecommerce-app.svg?branch=master)](https://travis-ci.org/lucassuar/django-tech-ecommerce-app)
+
 <h6>Lucas Suarez</h6>
+
 <h1> Full Stack Framework Milestone </h1>
 
 <a href="deployment url" target="_blank"> Click here to view website</a>
