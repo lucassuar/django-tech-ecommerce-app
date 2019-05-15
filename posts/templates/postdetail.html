@@ -15,7 +15,7 @@
             {% endif %}
             <hr>
             
-            <p class="lead"> {{ post.content }} </p>
+            <p class=""> {{ post.content }} </p>
     
             <blockquote class="blockquote">
               <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor.</p>
@@ -31,20 +31,26 @@
     <!-- Sidebar Widgets Column -->
               <div class="col-md-4">
                     <div class="card my-4 rounded-0">
-                      <h5 class="card-header">Products</h5>
-                      <div class="card-body">
+                      <h5 class="card-header">B&O Innovation Store</h5>
+                      <div class="card-body sidebar">
                         <div class="row">
                           <div class="col-lg-6">
                             <ul class="list-unstyled mb-0">
                               <li>
-                                <a href="#">Product1<</a>
+                                <a href="{% url 'all_products2' %}"> → Products </a>
+                              </li>
+                              <li>
+                                <a href="{% url 'get_suggestions' %}">→ Suggestions</a>
                               </li>
                             </ul>
                           </div>
                           <div class="col-lg-6">
                             <ul class="list-unstyled mb-0">
                               <li>
-                                <a href="#">Product1</a>
+                                <a href="{% url 'about' %}">→ What´s B&O </a>
+                              </li>
+                              <li>
+                                <a href="{% url 'get_posts' %}">→ Blog</a>
                               </li>
                             </ul>
                           </div>

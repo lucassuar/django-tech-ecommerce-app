@@ -161,6 +161,17 @@ input {
     text-align: right;
     padding-right: 3em;
 }
+
+
+.list-unstyled li a {
+    color: black;
+    text-decoration: none;
+}
+
+.list-unstyled li a:hover {
+    color: grey;
+}
+
 /* ----------------------------------------------------------------------------------------
                                  3. Footer CSS 
  --------------------------------------------------------------------------------------- */
