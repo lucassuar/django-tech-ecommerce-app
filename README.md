@@ -19,7 +19,7 @@
 
 
 ## UX
-This platform hass been built to be fully responsive so it works perfectly on any device screen size.
+This platform hass been built to be fully responsive so it works perfectly on any device and screen size.
 
 Some of the initial Wireframes can be found below:
   

@@ -29,10 +29,17 @@
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
                         {{ suggestion.content }}
+                        
                     </div>
                 </div>
                 
-          
+            <!-- Upvotes  -->
+                <form method="post" action="{% url 'upvotes' suggestion.id %}">
+                    {% csrf_token %}
+                    <button class="btn btn-success" type="submit">{{ suggestion.upvotes }}</button>
+                    
+                </form>  
+            <!-- Upvotes  -->
             
             </div>
          {% endfor %}
