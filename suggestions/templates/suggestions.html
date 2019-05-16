@@ -23,11 +23,11 @@
         {% for suggestion in suggestions %}   
             <div class="card mb-3 rounded-0">
                 <div class="card-header" id="headingOne">
-                    <h5 class="votes-form mb-0"> {{ suggestion.title }} </h5>
+                    <h5 class=" mb-0"> {{ suggestion.title }} </h5>
                         <!-- Upvotes  -->
-                        <form class="" method="post" action="{% url 'upvotes' suggestion.id %}">
+                        <form class="votes-form" method="post" action="{% url 'upvotes' suggestion.id %}">
                             {% csrf_token %}
-                            <button type="submit" class="btn btn btn-dark rounded-0 btn-sm">
+                            <button type="submit" class="btn btn btn-dark rounded-0 btn-sm ">
                                         Votes <span class="badge badge-light">{{ suggestion.upvotes }}</span></button>
                         </form>
                         <!-- Upvotes  -->
