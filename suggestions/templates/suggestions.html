@@ -23,7 +23,14 @@
         {% for suggestion in suggestions %}   
             <div class="card mb-3 rounded-0">
                 <div class="card-header" id="headingOne">
-                    <h5 class="mb-0"> {{ suggestion.title }} </h5>
+                    <h5 class="votes-form mb-0"> {{ suggestion.title }} </h5>
+                        <!-- Upvotes  -->
+                        <form class="" method="post" action="{% url 'upvotes' suggestion.id %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn btn-dark rounded-0 btn-sm">
+                                        Votes <span class="badge badge-light">{{ suggestion.upvotes }}</span></button>
+                        </form>
+                        <!-- Upvotes  -->
                 </div>
         
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
@@ -32,14 +39,6 @@
                         
                     </div>
                 </div>
-                
-            <!-- Upvotes  -->
-                <form method="post" action="{% url 'upvotes' suggestion.id %}">
-                    {% csrf_token %}
-                    <button class="btn btn-success" type="submit">{{ suggestion.upvotes }}</button>
-                    
-                </form>  
-            <!-- Upvotes  -->
             
             </div>
          {% endfor %}
@@ -48,7 +47,7 @@
 
 <!-- Button new suggestion  -->
 
-    <a href="{% url 'new_suggestion' %}" class="btn btn-dark rounded-0 btn-sm btn-home-products " >Add Product Suggestion</a>
+    <a href="{% url 'new_suggestion' %}" class="btn btn-dark rounded-0 btn-sm btn-home-products" >Add Product Suggestion</a>
 
 </div>
 {% endblock %}
