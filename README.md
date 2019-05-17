@@ -132,6 +132,85 @@ Id | When is Created | Id Name | Text |
 --- | --- | --- | --- | 
 1 | Date | Suggestion title| Suggestion content |
 
+## Testing
+<p>
+This project has been tested in many different ways: . 
+    - I used chrome developer tools to check for errors, responisvenes and test if something was wrong with my html, css or javascript files. 
+    - I used Django error page that appeared when my code had any errors, I also use print command at time with specific messages to understand if, for example, data was been aplied.
+    - As well, I used Django built-in test funcionality to create automated, custom test. This had allow me to create multiple tests for my views, models, forms...
+    - I also usedd Travis CI by connecting it trough my github repo. 
+    - Finally I went through lots of manual tests to understand and make sure the funcionality of the website was on point.
+Below you see some of the tests performed:
+
+#### Django Built-in tests
+
+<table>
+    <tr>
+        <th>PRODUCTS APP</th>
+        <th>CHECKOUT APP</th>
+        <th>ACCOUNTS APP</th>
+    </tr>
+    <tr>
+        <td>1 Test</td>
+        <td>5 Test</td>
+        <td>3 Test</td>
+    </tr>
+</table>
+
+#### Some of Manual Tests done
+
+<table>
+    <tr>
+        <th>Manual Test</th>
+        <th>Status</th>
+    </tr>
+    <tr>
+        <td>Clicking on logo icon in navigation takes user to homepage</td>
+        <td>Successful</td>
+    </tr>
+    <tr>
+        <td>Clicking on logo icon in navigation takes user to homepage</td>
+        <td>Successful</td>
+    </tr>
+    <tr>
+        <td>The platform has been tested on all modern desktop and mobile browsers to ensure cross compatibility and functionalities.</td>
+        <td>Successful</td>
+    </tr>
+    <tr>
+        <td>The platform has been tested to be fully responsive and that is correctly displayed across all of type devices.</td>
+        <td>Successful</td>
+    </tr>
+    <tr>
+        <td>The platform has been tested to ensure that all of the user stories were functional without errors.</td>
+        <td>Successful</td>
+    </tr>
+    <tr>
+        <td>The platform has been tested to make sure all urls work properly</td>
+        <td>Successful</td>
+    </tr>
+    <tr>
+        <td>The platform has been tested to ensure all text-area and inputs are perfectly funcioning and sending/reciving corrct data.</td>
+        <td>Successful</td>
+    </tr>
+    <tr>
+        <td>All links and buttons tested to make sure they all works as they should.</td>
+        <td>Successful</td>
+    </tr>
+    <tr>
+        <td>The user can come back to the previous window from everywhere, no rabbit holes. </td>
+        <td>Successful</td>
+    </tr>
+    <tr>
+        <td>Data from database is been accesible at all times.</td>
+        <td>Successful</td>
+    </tr>
+    <tr>
+        <td>Purchase process until the purchase its done works perfectly.</td>
+        <td>Successful</td>
+    </tr>
+</table>
+
+
 ## Deployment
 <p>
     This wproject has been deployed to heroku via Github. I created a git hub repostory first and conncted to a heroku app and then pushed the entire website code to it. 
