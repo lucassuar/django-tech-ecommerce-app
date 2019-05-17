@@ -121,16 +121,15 @@
             <hr>
             <div class="row">
                 <div class="col-sm-12 col-md-4">
-                    <a class="logo" href="{% url 'index' %}"> <img src="{% static 'img/footerbanner2.jpg' %}"></img></a>
+                    <a class="" href="{% url 'all_products2' %}"> <img src="{% static 'img/footerbanner2.jpg' %}"></img></a>
                 </div>
                 <div class="col-sm-12 col-md-4 footer-links">
                     <h5>B&O Shop</h5>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'all_products2' %}">Products</a></li>
+                        <li><a href="{% url 'get_posts' %}">Blog</a></li>
+                        <li><a href="{% url 'about' %}">Company Information</a></li>
                     </ul>
                     <div class="social-networks">
                         <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>

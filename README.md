@@ -21,9 +21,7 @@
 ## UX
 This platform hass been built to be fully responsive so it works perfectly on any device and screen size.
 
-Some of the initial Wireframes can be found below:
-  
- - [Image 1](heroku deployment image url)
+Some of the initial Wireframes for both descktop and mobile versions can be found here: [UI Mockup Images](https://github.com/lucassuar/django-tech-ecommerce-app/tree/master/media/ui%20mockups)
 
 
 ### User stories
