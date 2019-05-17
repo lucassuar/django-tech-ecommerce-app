@@ -5,6 +5,7 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 class Views_Test(TestCase):
+    
     def setUp(self):
         user = User.objects.create_user(username='username', password='password')
         self.client.login(username='username', password='password')

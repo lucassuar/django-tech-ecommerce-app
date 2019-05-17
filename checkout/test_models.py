@@ -4,7 +4,7 @@ from .models import Order
 # Create your tests here.
 class OrderTests(TestCase):
   
-    def date_str_test(self):
+    def test_date_str_test(self):
         test_order = Order(full_name= "test", 
                     phone_number= "test", 
                     country="test",
