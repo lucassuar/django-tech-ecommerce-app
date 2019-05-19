@@ -6,10 +6,16 @@ from .forms import ProductSuggestForm
 def get_suggestions(request):
     paramsAsc = request.GET.get('asc_votes', '')
     paramsDsc = request.GET.get('dsc_votes', '')
+    paramsDateAsc = request.GET.get('asc_date', '')
+    paramsDateDsc = request.GET.get('dsc_date', '')
     if paramsAsc:
             suggestions = Suggestion.objects.all().order_by('-upvotes')
     elif paramsDsc:   
             suggestions = Suggestion.objects.all().order_by('-upvotes').reverse()
+    elif paramsDateAsc: 
+        suggestions = Suggestion.objects.all()
+    elif paramsDateDsc: 
+        suggestions = Suggestion.objects.all().DateTime()
     else:
         suggestions = Suggestion.objects.all()
     

@@ -20,17 +20,20 @@
     
     
     <!-- Suggestions filter dropdown -->
-    <div class="dropdown mb-2">
-        <button class="btn btn-secondary rounded-0 btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Filter Suggestions
-      </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Date</a>
-            <a class="dropdown-item" href="#">Votes asc.</a>
-            <a class="dropdown-item" href="#">Votes dsc.</a>
-        </div>
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="dropdown mb-2">
+                    <button class="btn btn-secondary rounded-0 btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Filter Suggestions
+            </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a name="asc_votes" href="?asc_votes=1" class="dropdown-item">Votes asc.</a>
+                        <a name="dsc_votes" href="?dsc_votes=1" class="dropdown-item">Votes dsc.</a>
+                        <a name="First_added" href="?first_added=1" class="dropdown-item">First added</a>
+                    </div>
+                </div>
+            </div>
     </div>
-    
     <!-- Suggestions  -->
     <div id="accordion">
         {% for suggestion in suggestions %}   
