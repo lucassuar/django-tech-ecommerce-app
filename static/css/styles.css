@@ -38,9 +38,13 @@ body, html {
   font-size: small;
 }
 
-.btn-dark, .form-control {
+.btn-dark {
    border-radius: 0;
    text-transform: uppercase;
+}
+
+.form-control {
+   border-radius: 0;
 }
 
 .btn-dark {
@@ -105,6 +109,12 @@ input {
   border-radius: 0px;
 }
 
+.card {
+        margin: 0 auto; 
+        float: none; 
+        margin-bottom: 10px;
+}
+
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
@@ -114,6 +124,12 @@ input {
     padding-left: 1em;
 }
 
+.card-content {
+    display: flex;
+    padding: 10px 30px;
+    justify-content: space-between;
+    /* align-items: flex-end; */
+}
 
 
 /* Parallax div product page */
@@ -271,6 +287,9 @@ input {
     text-transform: uppercase;
 }
 
+.footer-img img {
+    width: 80%;
+}
 
 /* ----------------------------------------------------------------------------------------
                                  4. Media Queries 
@@ -281,5 +300,11 @@ input {
     #myFooter {
         text-align: center;
     }
+    
+    .card {
+        width: 100%;
+    }
+    
+    
 }
 

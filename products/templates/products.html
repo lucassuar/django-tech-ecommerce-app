@@ -38,10 +38,10 @@
     
     <section class="products-showcase">
 	   <div class="container">
-           <div class="row align-items-center row-header card-columns text-center">
+           <div class="row align-items-center row-header card-columns text-center justify-content-center">
            <div class="card-deck">
                {% for product in products|slice:":4" %}
-                    <div class="col-lg-3 col-md-6 col-xs-12 header-first">
+                    <div class="col-lg-3 col-md-6 col-xs-12 header-first text-center mx-auto">
                         <div class="card text-center" style="width: 18rem;">
                             <a href="{% url 'product_detail' product.id %}"  class="image-product-link"><img src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" /></a>
                             <div class="card-body">
@@ -52,7 +52,7 @@
                             <form method="post" action="{% url 'add_to_cart' product.id %}">
                             {% csrf_token %}
                             <div class="input-group add-checkout-div">
-                                <input class="input-add-checkout"  name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+                                <input class="input-add-checkout"  name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Qty">
                                 <span class="input-group-btn">
                                     <button class="btn btn-dark rounded-0 btn-sm" type="submit">Add to Cart</button>
                                 </span>
