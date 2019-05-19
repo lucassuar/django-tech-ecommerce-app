@@ -12,7 +12,7 @@ def suggestion_detail(request, pk):
     if request.method == "GET":
         suggestion = get_object_or_404(Suggestion, pk=pk)
         suggestion.save()
-        return render(request, "suggestiondetail.html", {'suggestion': suggestion})
+        return render(request, "suggestions.html", {'suggestion': suggestion})
     if request.method == "POST":
         suggestion = get_object_or_404(Suggestion, pk=pk)
         suggestion.upvotes += 1
