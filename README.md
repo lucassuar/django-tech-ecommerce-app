@@ -211,18 +211,15 @@ Below you see some of the tests performed:
 
 ## Deployment
 <p>
-    This wproject has been deployed to heroku via Github. I created a git hub repostory first and conncted to a heroku app and then pushed the entire website code to it. 
+    I created a git hub repostory first and conncted to a heroku app and then pushed the entire website code to it. 
     To ensure this worked and based on Heroku documentation I had to create a procfile and a requirements.txt file. This allowed heroku to install the correct packages and run my project accordingly. I also had to install the whitenoise package so heroku could find
     my static files. To also get my models working I had to migrate my database from sqlite to herokus postgres database.
+    
+    The app is hosted on Heroku. The code uses the default GitHub master branch. This wproject has been deployed to heroku via Github so the code in both GitHub and Heroku are the same. 
+    Both platforms have been connected too, therefor changes made to the master branch on GitHub are automatically pushed to Heroku. The only data used in Heroku not 
+    visible on GitHub are the secret config variables detailed in the contributing section of this readme, and the static and media files
+    hosted on Amazon S3.
 </p>
-<h3>How I set this website up as my own django app?</h3>
-<ol>
-    <li>First, I created a new project and install all the packages in my requirements.txt file</li>
-    <li>Then create a new django project and superuser.</li>
-    <li>Then copy all my apps into your new django project.</li>
-    <li>In your settings makse sure you have your apps in the installed_apps array</li>
-    <li>Then make sure your settings match mine</li>
-</ol>
 
 
 ## References/Acknowledgements:
