@@ -6,12 +6,15 @@ from .forms import ProductSuggestForm
 def get_suggestions(request):
     paramsAsc = request.GET.get('asc_votes', '')
     paramsDsc = request.GET.get('dsc_votes', '')
+    paramsOldest = request.GET.get('first_added', '')
     if paramsAsc:
             suggestions = Suggestion.objects.all().order_by('-upvotes')
     elif paramsDsc:   
             suggestions = Suggestion.objects.all().order_by('-upvotes').reverse()
+    elif paramsOldest:   
+            suggestions = Suggestion.objects.all()
     else:
-        suggestions = Suggestion.objects.all()
+        suggestions = Suggestion.objects.all().order_by('-id')
     
     return render(request, "suggestions.html", {'suggestions': suggestions})
 
@@ -35,7 +38,7 @@ def create_or_edit_suggestion(request, pk=None):
         form = ProductSuggestForm(request.POST, request.FILES, instance=suggestion)
         if form.is_valid():
             suggestion = form.save()
-            return redirect(suggestion_detail, suggestion.pk)
+            return redirect('/suggestions/', {'suggestion': suggestion})
     else:
         form = ProductSuggestForm(instance=suggestion)
     return render(request, 'suggestionform.html', {'form': form})

@@ -27,9 +27,10 @@
             Filter Suggestions
             </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a name="asc_votes" href="?asc_votes=1" class="dropdown-item">Votes asc.</a>
-                        <a name="dsc_votes" href="?dsc_votes=1" class="dropdown-item">Votes dsc.</a>
-                        <a name="First_added" href="?first_added=1" class="dropdown-item">First added</a>
+                        <a name="asc_votes" href="?asc_votes=1" class="dropdown-item">Highest votes</a>
+                        <a name="dsc_votes" href="?dsc_votes=1" class="dropdown-item">Lowest votes</a>
+                        <a name="First_added" href="?first_added=1" class="dropdown-item">Oldest</a>
+                        <a name="Last_added" href="?last_added=1" class="dropdown-item">Latest</a>
                     </div>
                 </div>
             </div>
@@ -39,7 +40,7 @@
         {% for suggestion in suggestions %}   
             <div class="card mb-3 rounded-0">
                 <div class="card-header" id="headingOne">
-                    <h5 class="mb-0 align-middle"> {{ suggestion.title }} </h5>
+                    <h5 class="mb-0 "> {{ suggestion.title }} </h5>
                         <!-- Upvotes  -->
                         <div class="float-right">
                             <form class="votes-form justify-content-end" method="post" action="{% url 'upvotes' suggestion.id %}">

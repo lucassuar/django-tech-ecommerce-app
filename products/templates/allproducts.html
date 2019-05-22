@@ -6,7 +6,12 @@
 	   <div class="container">
            <div class="row row-header card-columns justify-content-center">
            <div class="card-deck">
-               {% for product in products %}
+        {% if not products %} 
+                  <div>
+                     <p>No Products found</p>
+                  </div>
+            {% else %}
+              {% for product in products %}
                     <div class="col-xs-12 col-md-6 col-lg-3 header-first">
                         <div class="card text-center" style="width: 18rem;">
                             <a href="{% url 'product_detail' product.id %}"  class="image-product-link"><img src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" /></a>
@@ -26,7 +31,8 @@
                         </form>
                         </div>
                     </div>
-              {% endfor %}   
+              {% endfor %} 
+             {% endif %}
            </div>
         </div>    
 	</section>

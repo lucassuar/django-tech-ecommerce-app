@@ -45,7 +45,7 @@ Below are some of the potential stories that users can follow:
 
 - When a user would like to add a new suggestion, they should be able to:
     - Access a complete list of suggestions
-    - Add a new suggestion
+    - Add a new suggestion (no account needed as we want to promote as many interactions as possible)
     - See personal suggestion
 
 
