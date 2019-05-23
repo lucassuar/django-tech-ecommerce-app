@@ -9,7 +9,7 @@ dj-database-url==0.5.0
 django-forms-bootstrap==3.1.0
 django-storages==1.7.1
 docutils==0.14
-gunicorn==19.7.1
+gunicorn==19.8.1
 idna==2.7
 jmespath==0.9.3
 olefile==0.44
@@ -19,4 +19,3 @@ pytz==2017.2
 requests==2.20.0
 s3transfer==0.1.13
 stripe==1.70.0
-urllib3==1.23
