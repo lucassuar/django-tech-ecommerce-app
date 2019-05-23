@@ -225,6 +225,8 @@ Below you see some of the tests performed:
 ## References/Acknowledgements:
 - Products and design inspiration: https://www.bang-olufsen.com/
 - Checout page structure from: https://getbootstrap.com/docs/4.0/examples/checkout/
+- Some code logic has been used from video tutorialS and modified acordignly to suit this specific project.
+
 
 
 #### Licence
