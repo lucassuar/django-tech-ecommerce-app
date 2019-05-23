@@ -4,7 +4,7 @@
 
 <h1> Full Stack Framework Milestone </h1>
 
-<a href="deployment url" target="_blank"> Click here to view website</a>
+<a href="https://django-tech-ecommerce-app.herokuapp.com" target="_blank"> Click here to view website</a>
 
 
 ## Purpose
